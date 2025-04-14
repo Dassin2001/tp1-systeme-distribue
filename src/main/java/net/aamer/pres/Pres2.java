@@ -19,7 +19,7 @@ public class Pres2 {
 
         String metierClassName = scanner.nextLine();
         Class cMetier = Class.forName(metierClassName);
-        IMetier metier =(IMetier) cMetier.getConstructor(IDao.class).newInstance(d);
+        //IMetier metier =(IMetier) cMetier.getConstructor(IDao.class).newInstance(d);
 
         System.out.println("Res Clcul .....: "+metier.calcul());
 
