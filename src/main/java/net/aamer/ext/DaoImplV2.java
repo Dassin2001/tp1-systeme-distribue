@@ -3,7 +3,7 @@ package net.aamer.ext;
 import net.aamer.dao.IDao;
 import org.springframework.stereotype.Component;
 
-@Component("d2")
+//@Component("d2")
 public class DaoImplV2 implements IDao {
     @Override
     public double getData() {

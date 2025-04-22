@@ -15,10 +15,10 @@ public class MetierImpl implements IMetier {
 // ou bien on utilise seulement constructor avec parametre
 // pour injecter dans attribut dao un object de type idao , classe qui implemete interface Idao
 // ou moment de instenciation
-    public MetierImpl(@Qualifier("d2") IDao dao) {
+    public MetierImpl(IDao dao) {
         this.dao = dao;
     }
-    public MetierImpl() {}
+
 // le constructor sans parametre avec setter
 // apres instanciantion
 
