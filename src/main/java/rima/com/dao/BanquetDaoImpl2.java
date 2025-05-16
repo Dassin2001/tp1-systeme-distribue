@@ -1,27 +1,23 @@
 package rima.com.dao;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 import rima.com.entities.Client;
 import rima.com.entities.Compte;
 import rima.com.entities.Employe;
-@Repository("dao1")
-public class BanquetDaoImpl implements IBanquetDao {
+@Repository("dao2")
+public class BanquetDaoImpl2 implements IBanquetDao {
     @Override
     public Client addClient(Client c) {
-        System.out.println("DAO: Ajout client " + c.getNom());
-        return c;
+        return null;
     }
 
     @Override
     public Employe addEmploye(Employe e, Long codeSup) {
-        System.out.println("DAO: Ajout employé " + e.getNom());
-        return e;
+        return null;
     }
 
     @Override
     public Compte addCompte(Compte cp, Long codeCli, Long codeEmp) {
-        System.out.println("DAO: Ajout compte " + cp.getCode());
-        return cp;
+        return null;
     }
 }
