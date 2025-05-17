@@ -35,7 +35,7 @@ Ce projet a été réalisé dans le cadre du module **Systèmes Distribués**. I
 | Spring XML | Configuration via `applicationContext.xml` et injection par setter ou constructeur |
 | Spring Annotations | Détection automatique via `@Component`, injection avec `@Autowired`, gestion des conflits avec `@Qualifier` |
 
-[Télécharger le rapport détaillé (Word)](https://drive.google.com/file/d/1GRkfInQsxUTAQX9Lo02YNAL7FsdT-M0Y/view?usp=drive_link) ← **Remplace ce lien par le tien**
+Rapport détaillé : (https://drive.google.com/file/d/1GRkfInQsxUTAQX9Lo02YNAL7FsdT-M0Y/view?usp=drive_link)
 
 ---
 
