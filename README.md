@@ -30,12 +30,12 @@ Ce projet a été réalisé dans le cadre du module **Systèmes Distribués**. I
 
 | Méthode d’injection | Description |
 |---------------------|-------------|
-| 🧱 Instanciation statique | Création manuelle des objets avec `new`, couplage fort |
-| 🔄 Instanciation dynamique | Réflexion Java (`Class.forName`) pour instanciation à l’exécution |
-| 🌿 Spring XML | Configuration via `applicationContext.xml` et injection par setter ou constructeur |
-| 🧷 Spring Annotations | Détection automatique via `@Component`, injection avec `@Autowired`, gestion des conflits avec `@Qualifier` |
+| Instanciation statique | Création manuelle des objets avec `new`, couplage fort |
+| Instanciation dynamique | Réflexion Java (`Class.forName`) pour instanciation à l’exécution |
+| Spring XML | Configuration via `applicationContext.xml` et injection par setter ou constructeur |
+| Spring Annotations | Détection automatique via `@Component`, injection avec `@Autowired`, gestion des conflits avec `@Qualifier` |
 
-👉 [Télécharger le rapport détaillé (Word)](https://drive.google.com/file/d/1GRkfInQsxUTAQX9Lo02YNAL7FsdT-M0Y/view?usp=drive_link) ← **Remplace ce lien par le tien**
+[Télécharger le rapport détaillé (Word)](https://drive.google.com/file/d/1GRkfInQsxUTAQX9Lo02YNAL7FsdT-M0Y/view?usp=drive_link) ← **Remplace ce lien par le tien**
 
 ---
 
