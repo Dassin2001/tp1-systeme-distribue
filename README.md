@@ -34,9 +34,13 @@ Ce projet a été réalisé dans le cadre du module **Systèmes Distribués**. I
 | Instanciation dynamique | Réflexion Java (`Class.forName`) pour instanciation à l’exécution |
 | Spring XML | Configuration via `applicationContext.xml` et injection par setter ou constructeur |
 | Spring Annotations | Détection automatique via `@Component`, injection avec `@Autowired`, gestion des conflits avec `@Qualifier` |
+
+ 	
+
 •	Injection des dépendances par Instanciation Statique : est la forme la plus simple d’injection des dépendances. Dans cette approche, les dépendances sont créées et injectées directement dans le code à l’aide de l’opérateur new. Le développeur instancie manuellement chaque classe dans la classe cliente. Cette méthode ne nécessite aucune configuration externe et permet un démarrage rapide du développement. Cependant, elle introduit un couplage fort entre les composants, ce qui rend difficile le remplacement d’une implémentation par une autre sans modifier le code. Cela limite la réutilisabilité et la testabilité de l'application. Ce type d’injection est donc à éviter dans des projets de grande envergure ou nécessitant une grande flexibilité.
- 	# Fonctionnement :
-    ![Fonctionnement de l'injection](image/1.png)
+
+![Fonctionnement de l'injection](image/1.png)
+
 
 Le composant MetierImpl dépend ici directement de l’implémentation DaoImpl, ce qui signifie qu’un changement de DAO nécessiterait de modifier cette ligne de code.
 
