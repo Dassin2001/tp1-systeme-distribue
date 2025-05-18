@@ -3,7 +3,7 @@
 
 Ce projet a été réalisé dans le cadre du module **Systèmes Distribués** (MSDIA-2024-2025). Il porte sur la compréhension et la mise en œuvre de l’**injection des dépendances (IoC)** à travers différentes approches Java, dont l’utilisation du **framework Spring**, ainsi que le développement d’un **mini framework maison**.
 
-> **Réalisé par : AAMER FADMA**
+
 
 ---
 
@@ -29,8 +29,8 @@ Ce projet a été réalisé dans le cadre du module **Systèmes Distribués** (M
 ## Partie 1 – Étude et expérimentation
 
 L'injection de dépendances (Dependency Injection - DI) est un principe fondamental de la programmation orientée objet, souvent utilisé dans l’**inversion de contrôle** (IoC). Elle consiste à déléguer la création des dépendances d’un objet à un composant externe, favorisant ainsi un **faible couplage** entre les composants et facilitant la maintenance, les tests et l’extensibilité du code.
-
-### ▶️ 1. Injection des dépendances par **Instanciation Statique**
+---
+### 1. Injection des dépendances par **Instanciation Statique**
 
 Cette approche est la forme la plus simple d’injection des dépendances. Les dépendances sont créées manuellement avec `new`, directement dans la classe cliente. Cela permet un développement rapide, sans configuration externe, mais entraîne un **couplage fort**, ce qui rend le code difficile à tester et à maintenir dans des projets évolutifs.
 
@@ -38,13 +38,15 @@ Cette approche est la forme la plus simple d’injection des dépendances. Les d
 private DaoImpl dao = new DaoImpl();
 IMetier metier = new MetierImpl(dao);
 
-##-------------------------------------------------------------------------------
+
  	
 
 ![Fonctionnement de l'injection](image/1.png)
 
 
 Le composant MetierImpl dépend ici directement de l’implémentation DaoImpl, ce qui signifie qu’un changement de DAO nécessiterait de modifier cette ligne de code.
+---
+### 1. Injection des dépendances par **Instanciation dynamique**
 
 •	Injection des dependances par Instanciation dynamique utilise les capacités de réflexion de Java pour créer les objets et injecter leurs dépendances à l’exécution, sans utiliser explicitement l’opérateur new. Elle repose sur la méthode Class.forName().newInstance() pour instancier les classes dynamiquement à partir de leur nom, généralement fourni dans un fichier de configuration. Cette technique permet de créer des applications faiblement couplées, où les composants peuvent être remplacés facilement sans modifier le code source principal. C’est une méthode intermédiaire entre l’injection statique et l’utilisation de frameworks comme Spring. Elle est aussi souvent utilisée dans le développement de mini frameworks personnalisés. En revanche, cette méthode peut introduire des erreurs à l’exécution si les noms de classe sont incorrects ou si les dépendances ne sont pas bien gérées.
  	# Fonctionnement :
