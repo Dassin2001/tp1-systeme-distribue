@@ -46,10 +46,10 @@ IMetier metier = new MetierImpl(dao);
 
 Le composant MetierImpl dépend ici directement de l’implémentation DaoImpl, ce qui signifie qu’un changement de DAO nécessiterait de modifier cette ligne de code.
 ---
-### 1. Injection des dépendances par **Instanciation dynamique**
+### 2. Injection des dépendances par **Instanciation dynamique**
 
 •	Injection des dependances par Instanciation dynamique utilise les capacités de réflexion de Java pour créer les objets et injecter leurs dépendances à l’exécution, sans utiliser explicitement l’opérateur new. Elle repose sur la méthode Class.forName().newInstance() pour instancier les classes dynamiquement à partir de leur nom, généralement fourni dans un fichier de configuration. Cette technique permet de créer des applications faiblement couplées, où les composants peuvent être remplacés facilement sans modifier le code source principal. C’est une méthode intermédiaire entre l’injection statique et l’utilisation de frameworks comme Spring. Elle est aussi souvent utilisée dans le développement de mini frameworks personnalisés. En revanche, cette méthode peut introduire des erreurs à l’exécution si les noms de classe sont incorrects ou si les dépendances ne sont pas bien gérées.
- 	# Fonctionnement :
+ 	### Fonctionnement :
   
 ![Fonctionnement de l'injection](image/1.png)
 
@@ -130,11 +130,10 @@ L’annotation @Autowired permet à Spring d’injecter automatiquement une dép
 
 ![illustration](image/12.png)
 
-Puis on crie la couche présentation version annotation :
-
+Puis on crée la couche présentation
 "c'est dire creer les Object on se basant sur les annotations " 
 
-ApplicationContext applicationContext = new AnnotationConfigApplicationContext ("net.aamer");
+"""ApplicationContext applicationContext = new AnnotationConfigApplicationContext ("net.aamer");"""
 
 Il fait une recherche sur les classe qui utilisent les annotations component dans le package spécifier (net.aamer), puis les instancies
 
@@ -155,7 +154,7 @@ Pour résoudre ce problème, on utilise l’annotation @Qualifier dans le constr
 
 ![illustration](image/16.png)
  	Une autre solution consiste à spécifier explicitement les packages à scanner lors de la création du contexte Spring. Cela permet de mieux contrôler les classes détectées par Spring et d’éviter certains conflits de beans non désirés.
-  ApplicationContext applicationContext = new AnnotationConfigApplicationContext("net.aamer.ext","net.aamer.metier");
+  """ApplicationContext applicationContext = new AnnotationConfigApplicationContext("net.aamer.ext","net.aamer.metier");""""
 ![illustration](image/17.png)
 
 L’approche par annotations rend le code plus propre, plus lisible et moins verbeux qu’avec les fichiers XML. Spring automatise la détection, la création et l’injection des objets. Grâce à @Component, @Autowired, et @Qualifier, on peut structurer une application de manière claire, modulaire et facilement testable.
